@@ -3,7 +3,7 @@
 
 local leaves_table = {
 	'pale_green', 'orange', 'red', 'blooms', 'acacia_blooms',
-	'orange_aspen', 'red_aspen', 'aspen_blooms', 'yellow_aspen'}
+	'orange_aspen', 'red_aspen', 'aspen_blooms', 'yellow_aspen','sticks'}
 
 local sticks_table = {'default', 'aspen'}
 
@@ -24,7 +24,7 @@ for i, name in pairs(leaves_table) do
 end
 
 for i, name in pairs(sticks_table) do
-	
+
 minetest.register_node('mymonths:sticks_' .. name, {
 	description = 'Sticks',
 	drawtype = 'allfaces_optional',
@@ -134,7 +134,7 @@ minetest.register_abm({
 --leaves 'falling/dying' in October
 minetest.register_abm({
 	nodenames = {'mymonths:leaves_red', 'mymonths:leaves_red_aspen'},
-	interval = 60, 
+	interval = 60,
 	chance = 40,
 
 	action = function (pos, node, active_object_count, active_object_count_wider)
@@ -192,7 +192,7 @@ minetest.register_abm({
 --New growth in spring
 minetest.register_abm({
 	nodenames = {'mymonths:sticks_default', 'mymonths:leaves_blooms', 'mymonths:sticks_aspen', 'mymonths:leaves_aspen_blooms'},
-	interval = 60, 
+	interval = 60,
 	chance = 40,
 
 	action = function (pos, node, active_object_count, active_object_count_wider)

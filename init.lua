@@ -2,9 +2,9 @@
 mymonths = {}
 
 --Turn damage on or off. This will make storms and hail cause damage
-mymonths.damage = false
+mymonths.damage = true
 
---You can turn weather off 
+--You can turn weather off
 mymonths.use_weather = true
 
 --Leaves change color in the fall.
@@ -19,8 +19,8 @@ mymonths.use_puddles = true
 --Flowers die in winter, grown in spring
 mymonths.flowers_die = true
 
-if minetest.get_modpath("lightning") then 
-	lightning.auto = false 
+if minetest.get_modpath("lightning") then
+	lightning.auto = false
 end
 
 
